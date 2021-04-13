@@ -33,7 +33,7 @@
             }
             return $drives;
         } else {
-            return array('/');
+            return array(DIRECTORY_SEPARATOR);
         }
     }
 
