@@ -2,7 +2,7 @@
     require_once __DIR__ . '/src/Kito/Loader/AbstractLoader.php';
 
     require_once __DIR__ . '/src//Kito/Loader/PSR0Loader.php';
-    $cacheLoader = new \Kito\Loader\PSR0Loader(__DIR__);
+    $cacheLoader = new \Kito\Loader\PSR0Loader(__DIR__ . '/src');
     $cacheLoader->register();
 
     require_once __DIR__ . '/src/Kito/Loader/BLKLoader.php';
