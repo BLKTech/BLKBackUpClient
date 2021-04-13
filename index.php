@@ -19,7 +19,24 @@
         }        
     }
 
-
+    //** FIX ME, FIND BEST WAY TO SCAN DRIVES ON WINDOWS **//
+    function getRootDirs(): array
+    {
+        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+            $drives = array();
+            foreach (range('A', 'Z') as $drive)
+            {
+                if(is_dir($drive . ":" . DIRECTORY_SEPARATOR))
+                {
+                    $drives[] = $drive . ":" . DIRECTORY_SEPARATOR;
+                }
+            }
+            return $drives;
+        } else {
+            return array('/');
+        }
+    }
 
     var_dump(getIdMachine());
+    var_dump(getRootDirs());
     
