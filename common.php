@@ -36,7 +36,4 @@
             return array(DIRECTORY_SEPARATOR);
         }
     }
-
-    var_dump(getIdMachine());
-    var_dump(getRootDirs());
     
