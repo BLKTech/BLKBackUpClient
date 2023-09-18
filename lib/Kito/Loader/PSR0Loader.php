@@ -39,12 +39,12 @@ class PSR0Loader extends AbstractLoader
     public function getFileName(string $className): string
     {
         $classFile = $this->_libPath . parent::parsePath($className . '.php');
-        
+
         return (
-                pathinfo($classFile,PATHINFO_DIRNAME) . 
-                DIRECTORY_SEPARATOR . 
-                str_replace('_', DIRECTORY_SEPARATOR, pathinfo($classFile,PATHINFO_BASENAME))
-        );        
+            pathinfo($classFile, PATHINFO_DIRNAME) .
+            DIRECTORY_SEPARATOR .
+            str_replace('_', DIRECTORY_SEPARATOR, pathinfo($classFile, PATHINFO_BASENAME))
+        );
     }
 
     /**

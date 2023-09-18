@@ -19,7 +19,7 @@ namespace Kito\Loader;
 
 class BLKLoader extends AbstractLoader
 {
-    const server = 'https://sources.blktech.org';
+    public const server = 'https://sources.blktech.org';
 
     private $cacheLoader;
 
